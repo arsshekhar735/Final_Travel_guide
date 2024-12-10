@@ -1,0 +1,90 @@
+/* Body Font */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Section */
+.main {
+  margin: 2%;
+  display: flex;
+  flex-wrap: wrap; /* Allow the cards to wrap to the next line */
+  justify-content: space-between; /* Evenly space the cards */
+}
+
+/* Card Styling */
+.card {
+  flex: 1 1 calc(25% - 20px); /* Each card takes 25% of the container's width minus the margin */
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 10px;
+  text-align: center;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+  overflow: hidden; /* Prevent content from overflowing the card */
+}
+
+/* Card Image Styling */
+.card .image img {
+  width: 100%;
+  height: 200px;        
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* Title Styling */
+.title {
+  text-align: center;
+  padding: 10px;
+}
+
+/* Card Title */
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Description Section */
+.des {
+  padding: 10px;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Button Styling */
+button {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+}
+
+/* Hover Effect for Cards */
+.card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 20px); /* Cards will take 50% width on medium-sized screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 calc(100% - 20px); /* Cards will take 100% width on small screens */
+  }
+}

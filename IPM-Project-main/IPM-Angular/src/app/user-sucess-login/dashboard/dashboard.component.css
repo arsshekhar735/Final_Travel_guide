@@ -1,0 +1,25 @@
+.icon {
+    font-size: 48px;
+    color: whitesmoke;
+}
+
+.card {
+    background-image: url("https://i.pinimg.com/736x/1a/7f/fd/1a7ffd8a5581fbc853b70f29752b5793.jpg");
+    border: 90%;
+    transition: transform 0.2s;
+    background: linear-gradient(to bottom, #e79441, #ce4499), 
+                url('https://i.pinimg.com/736x/1a/7f/fd/1a7ffd8a5581fbc853b70f29752b5793.jpg') no-repeat center center;
+    background-size: cover; /* Ensures the image covers the card completely */
+    color: rgb(200, 49, 49); /* Ensures text is readable over the image */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(230, 173, 116, 0.9);
+}
+
+.card-title {
+    margin-top: 10px;
+    font-size: 18px;
+    color: whitesmoke;
+}

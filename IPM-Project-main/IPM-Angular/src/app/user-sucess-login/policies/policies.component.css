@@ -1,0 +1,161 @@
+/* General container styles */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Heading styles */
+h2.text-center {
+  font-family: 'Arial', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Search Bar styles */
+.search-bar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Collapsed Search Button */
+.search-bar input.form-control {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  opacity: 1;
+  padding: 0;
+}
+
+.search-bar input.form-control::placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.search-bar input.form-control:hover,
+.search-bar input.form-control:focus {
+  width: 300px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #fff;
+  color: #333;
+  text-align: left;
+  padding: 0 15px;
+  border: 2px solid #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Show Placeholder on Hover or Focus */
+.search-bar input.form-control:hover::placeholder,
+.search-bar input.form-control:focus::placeholder {
+  opacity: 1;
+}
+
+
+/* Voice Button */
+.search-bar button.btn-secondary {
+  margin-left: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Voice Button Hover Effect */
+.search-bar button.btn-secondary:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Offer banner styles */
+.offer-banner {
+  background: linear-gradient(45deg, #ff8a00, #e52e71);
+  padding: 20px;
+  color: #fff;
+  border-radius: 15px;
+}
+
+.offer-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.offer-description {
+  font-size: 1rem;
+}
+
+/* Card styles */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.card button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-bar input.form-control {
+    width: 100%;
+  }
+}

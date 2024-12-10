@@ -1,0 +1,44 @@
+<app-navlogin></app-navlogin>
+
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Book Your Hotel</h2>
+
+  <!-- Search Bar -->
+  <div class="search-bar mb-4 text-center">
+    <input 
+      type="text" 
+      class="form-control" 
+      placeholder="Search for hotels..." 
+      [(ngModel)]="searchQuery" 
+      (input)="filterHotels()" 
+    />
+    <button class="btn btn-secondary" (click)="startVoiceSearch()">🎤</button>
+  </div>
+
+  <!-- Offer Banner -->
+  <div class="offer-banner text-center mb-4">
+    <h3 class="offer-title">Limited Time Offer!</h3>
+    <p class="offer-description">Book 2 nights, get 1 night free! Don't miss out on this amazing deal.</p>
+  </div>
+
+  <!-- Hotel Cards -->
+  <div class="row">
+    <div class="col-md-4" *ngFor="let hotel of filteredHotels">
+      <div class="card mb-4">
+        <div class="card-header">
+          <img [src]="'https://via.placeholder.com/350x200?text=' + hotel.name" alt="Hotel Image" class="card-img-top">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ hotel.name }}</h5>
+          <p class="card-text">
+            Location: {{ hotel.location }} <br />
+            Price: ₹{{ hotel.price }}
+          </p>
+          <button class="btn btn-primary w-100" (click)="bookHotel(hotel)">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
